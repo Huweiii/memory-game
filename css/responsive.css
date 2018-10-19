@@ -46,11 +46,6 @@
 
 @media screen and (min-width: 580px) {
 
-    .board {
-        width: 540px;
-        height: 540px;
-    }
-
     p {
         display: block;
         margin-block-start: 0.75em;
