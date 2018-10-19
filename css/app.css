@@ -1,109 +1,77 @@
-html {
-    box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-}
-
-html,
 body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+    text-align: center;
 }
 
-body {
-    background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
-    font-family: 'Coda', cursive;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
 
 h1 {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
+    font-family: 'Rockwell', sans-serif;
+    color: #333333;
+    margin-block-start: 2em;
+    margin-block-end: 0.2em;
 }
 
-/*
- * Styles for the deck of cards
- */
+.level {
+    font-family: Rockwell-Regular;
+    font-size: 28px;
+    color: #293040;
+    letter-spacing: -1.13px;
+}
 
-.deck {
-    width: 660px;
-    min-height: 680px;
-    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
-    padding: 32px;
+.numbers {
+    display: inline-block;
+    font-family: Rockwell-Regular;
+    font-size: 24px;
+    color: #293040;
+    letter-spacing: -0.76px;
+}
+
+.unit {
+    display: inline-block;
+    font-family: Rockwell-Regular;
+    font-size: 24px;
+    color: #293040;
+    letter-spacing: -0.76px;
+}
+
+.board {
+    background-image: linear-gradient(45deg, #DFE1E6 0%, #F2F3F7 100%);
+    box-shadow: 15px 15px 15px -5px #BFC2CA;
+    width: 480px;
+    height: 480px;
+    margin: 0 auto;
     border-radius: 10px;
-    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    padding: 16px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 0 3em;
 }
 
-.deck .card {
-    height: 125px;
-    width: 125px;
-    background: #2e3d49;
-    font-size: 0;
-    color: #ffffff;
+.baseCard {
+    width: 25%;
+    height: 25%;
+}
+
+.card {
+    background: #FFFFFF;
+    box-shadow: 8px 8px 8px -4px #C8CCD4;
+    border-radius: 6px;
+    width: 86%;
+    height: 86%;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+
+.refresh {
+    width: 120px;
+    height: 40px;
     border-radius: 8px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
-}
-
-.deck .card.open {
-    transform: rotateY(0);
-    background: #02b3e4;
-    cursor: default;
-}
-
-.deck .card.show {
-    font-size: 33px;
-}
-
-.deck .card.match {
-    cursor: default;
-    background: #02ccba;
-    font-size: 33px;
-}
-
-/*
- * Styles for the Score Panel
- */
-
-.score-panel {
-    text-align: left;
-    width: 345px;
-    margin-bottom: 10px;
-}
-
-.score-panel .stars {
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-    margin: 0 5px 0 0;
-}
-
-.score-panel .stars li {
-    list-style: none;
-    display: inline-block;
-}
-
-.score-panel .restart {
-    float: right;
-    cursor: pointer;
+    margin-top: 40px;
+    background-image: linear-gradient(-136deg, #569CFF 0%, #515DEC 100%);
+    box-shadow: 8px 8px 8px -4px rgba(71,182,239,0.53);
+    font-family: Rockwell-Regular;
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 40px;
 }
