@@ -3,7 +3,6 @@ body {
     margin: 0 auto;
 }
 
-
 h1 {
     font-family: 'Rockwell', sans-serif;
     color: #333333;
@@ -34,11 +33,11 @@ h1 {
     letter-spacing: -0.76px;
 }
 
-.board {
+.deck {
     background-image: linear-gradient(45deg, #DFE1E6 0%, #F2F3F7 100%);
     box-shadow: 0px 15px 15px -5px #BFC2CA;
-    width: 440px;
-    height: 440px;
+    width: 300px;
+    height: 300px;
     margin: 0 auto;
     border-radius: 10px;
     padding: 8px;
@@ -61,8 +60,39 @@ h1 {
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
-    
 }
+
+.open {
+    background-image: linear-gradient(-135deg, #77D037 0%, #429321 100%);
+    box-shadow: 8px 8px 8px -4px rgba(86,196,99,0.50);
+}
+
+.match {
+    background-image: linear-gradient(-136deg, #569CFF 0%, #515DEC 100%);
+    box-shadow: 8px 8px 8px -4px rgba(71,182,239,0.53);
+}
+
+.notMatch {
+    background-image: linear-gradient(-135deg, #FF6674 0%, #E31534 100%);
+    box-shadow: 8px 8px 8px -4px rgba(226,9,35,0.34);
+}
+
+img {
+    width: 100%;
+}
+
+
+.cardBack{
+    background-image: linear-gradient(-136deg, #569CFF 0%, #515DEC 100%);
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
 
 .refresh {
     border: 0px;
