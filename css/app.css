@@ -62,19 +62,49 @@ h1 {
     transform: translate(-50%,-50%);
 }
 
-.open {
+.open { 
+    border-radius: 6px;
     background-image: linear-gradient(-135deg, #77D037 0%, #429321 100%);
     box-shadow: 8px 8px 8px -4px rgba(86,196,99,0.50);
+    width: 86%;
+    height: 86%;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
 }
 
 .match {
+    border-radius: 6px;
     background-image: linear-gradient(-136deg, #569CFF 0%, #515DEC 100%);
     box-shadow: 8px 8px 8px -4px rgba(71,182,239,0.53);
+    width: 86%;
+    height: 86%;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
 }
 
 .notMatch {
+    border-radius: 6px;
     background-image: linear-gradient(-135deg, #FF6674 0%, #E31534 100%);
     box-shadow: 8px 8px 8px -4px rgba(226,9,35,0.34);
+    width: 86%;
+    height: 86%;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.randomImg {
+    width: 86%;
+    height: 86%;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
 }
 
 img {

@@ -1,41 +1,105 @@
+
+// 获取所有.card元素 （这是一个数组）
+const cardEl = document.querySelectorAll(".card");
+console.log(cardEl);
+
+// 用for循环，将所有取到的.card list集合 依次加入img
+for(var i=0; i<cardEl.length; i++) {
+    card = cardEl[i];
+    const getImg = document.createElement("img");
+    getImg.src = "img/shape_8.png";
+    card.appendChild(getImg);
+}
+
+
+let img = document.getElementsByTagName('img');
 let deck = document.querySelector(".deck");
 
 // 点击后普通效果 绿色背景 open
-deck.addEventListener("click", function(open){
-    let card = event.target;
-    console.log("clicked");
-    card.className = "card open";
+deck.addEventListener("click", function(event){
+    let cardEl = event.target;
+    // 查看nodeName
+    console.log("clicked" + event.target.nodeName);
+    // 如果目标nodeName为IMG，则更换card的className
+    if (event.target.nodeName == "IMG"){
+        cardEl.parentNode.className = "open";
+        console.log("open");
+    }
 });
 
-// 点击后匹配效果 蓝色背景 match
-deck.addEventListener("click", function(match){
-    let card = event.target;
-    console.log("clicked");
-    card.className = "card match";
-    console.log("matched")
-});
 
-// 点击后不匹配效果 红色背景 notMatch
-deck.addEventListener("click", function(notMatch){
-    let card = event.target;
-    console.log("clicked");
-    card.className = "card notMatch";
-    console.log("not matched")
-});
+
+// 为所有card添加点击事件 
+// let cardList = document.querySelectorAll('.card');
+//   for(var i=0; i<cardList.length; i++){
+//     cardList[i].addEventListener('click',function(open){
+//       open.target.className = 'open';
+//   });
+// }
+
+
+// function changebg(deck){
+//     console.log(deck);
+
+// }
+// const getImg = document.createElement("img");
+// getImg.src = "img/shape_8.png";
+// cardEl.appendChild(getImg);  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // 点击后匹配效果 蓝色背景 match
+// deck.addEventListener("click", function(match){
+//     let card = event.target;
+//     console.log("clicked");
+//     card.className = "card match";
+//     console.log("matched")
+// });
+
+// // 点击后不匹配效果 红色背景 notMatch
+// deck.addEventListener("click", function(notMatch){
+//     let card = event.target;
+//     console.log("clicked");
+//     card.className = "card notMatch";
+//     console.log("not matched")
+// });
 
 
 
 // 随机图片
 // let img = document.querySelector("img")
 
-function getImg(randomNum) {  
-    console.log("img/shape_" + randomNum + ".png");
-}
+// function getImg(randomNum) {  
+//     console.log("img/shape_" + randomNum + ".png");
+//     return getImg;
+// }
 
-getImg(8);
+// getImg(2);
+
+// // document.querySelector("img").src = getImg;
 
 
-document.querySelector("img").src = getImg;
+
+
 
 
 
