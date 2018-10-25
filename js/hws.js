@@ -21,40 +21,42 @@ for(var i=0; i<cardEl.length; i++) {
     const getImg = document.createElement("img");
     // 取到随机图片
     getImg.src = "img/shape_" + data[i] + ".png";
-    // getImg.src = "img/shape_8.png";
+    // console.log(data[i]);
     card.appendChild(getImg);
 }
 
 let img = document.getElementsByTagName('img');
 let deck = document.querySelector(".deck");
 
+// --------------------------------------------------
+
+
 // 点击后普通效果 绿色背景 open
 deck.addEventListener("click", function(event){
     let cardEl = event.target;
+    
     // 查看nodeName
     console.log("clicked" + event.target.nodeName);
     // 如果目标nodeName为IMG，则更换card的className
+
     if (event.target.nodeName == "IMG"){
         cardEl.parentNode.className = "open";
         console.log("open");
     }
+    
+    // 800毫秒后翻回卡片
+    setTimeout(function(){
+        if (event.target.nodeName == "IMG"){
+        cardEl.parentNode.className = "card";
+        }
+    }, 800)
+    
 });
 
 
 
 
 
-// 为所有card添加点击事件 
-// let cardList = document.querySelectorAll('.card');
-//   for(var i=0; i<cardList.length; i++){
-//     cardList[i].addEventListener('click',function(open){
-//       open.target.className = 'open';
-//   });
-// }
-
-
-// function changebg(deck){
-//     console.log(deck);
 
 
 
@@ -66,48 +68,6 @@ deck.addEventListener("click", function(event){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // 点击后匹配效果 蓝色背景 match
-// deck.addEventListener("click", function(match){
-//     let card = event.target;
-//     console.log("clicked");
-//     card.className = "card match";
-//     console.log("matched")
-// });
-
-// // 点击后不匹配效果 红色背景 notMatch
-// deck.addEventListener("click", function(notMatch){
-//     let card = event.target;
-//     console.log("clicked");
-//     card.className = "card notMatch";
-//     console.log("not matched")
-// });
-
-
-
-// 随机图片
-// let img = document.querySelector("img")
-
-// function getImg(randomNum) {  
-//     console.log("img/shape_" + randomNum + ".png");
-//     return getImg;
-// }
-
-// getImg(2);
-
-// // document.querySelector("img").src = getImg;
 
 
 
