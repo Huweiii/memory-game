@@ -138,6 +138,20 @@ img {
     line-height: 44px;
 }
 
+.again {
+    border: 0px;
+    width: 120px;
+    height: 40px;
+    border-radius: 8px;
+    margin-top: 40px;
+    background-image: linear-gradient(-136deg, #569CFF 0%, #515DEC 100%);
+    box-shadow: 8px 8px 8px -4px rgba(71,182,239,0.53);
+    font-family: Rockwell-Regular;
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 44px;
+}
+
 .success {
     display: none;
     width:100%;
