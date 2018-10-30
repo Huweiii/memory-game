@@ -11,12 +11,12 @@
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
 </head>
 <body>
-    
-
     <section class="info">
         <h1>Matching Game</h1>
         <div class="level">
-            ☆☆☆
+            <span id="firstStar">★</span>
+            <span id="secondStar">★</span>
+            <span id="thirdStar">☆</span>
         </div>
         <div class="actions">
             <p class="numbers">0</p>
@@ -36,7 +36,12 @@
         </div>
         
         <div class="baseCard">
-            <div class="card notMatch">
+            <div class="card">
+            </div>
+        </div>
+
+        <div class="baseCard">
+            <div class="card">
             </div>
         </div>
 
@@ -51,7 +56,12 @@
         </div>
 
         <div class="baseCard">
-            <div class="card notMatch">
+            <div class="card">
+            </div>
+        </div>
+
+        <div class="baseCard">
+            <div class="card">
             </div>
         </div>
 
@@ -66,7 +76,12 @@
         </div>
 
         <div class="baseCard">
-            <div class="card open">
+            <div class="card">
+            </div>
+        </div>
+
+        <div class="baseCard">
+            <div class="card">
             </div>
         </div>
 
@@ -81,22 +96,7 @@
         </div>
 
         <div class="baseCard">
-            <div class="card match">
-            </div>
-        </div>
-
-        <div class="baseCard">
             <div class="card">
-            </div>
-        </div>
-
-        <div class="baseCard">
-            <div class="card">
-            </div>
-        </div>
-
-        <div class="baseCard">
-            <div class="card match">
             </div>
         </div>
 
@@ -108,6 +108,25 @@
     </div>
 
     <button class="refresh" type="button">Refresh</button>
+
+    <div class="success">
+        <div class="modal">
+            <div class="congratsGroup">
+                <img class="congratsImg" src="img/congrats.png">
+                <h1 id="congrats">Congratulations!</h1>
+                <p id="score">⭐️⭐️⭐️</p>
+                <div class="actions">
+                    <p id="numbers">32</p>
+                    <p id="unit">Moves</p>
+                </div>
+                <div class="time">
+                    <p id="numbers">32</p>
+                    <p id="unit">seconds</p>
+                </div>
+                <button class="refresh" type="button">Again</button>
+            </div>
+        </div>
+    </div>
 
     <script src="js/hws.js"></script>
 </body>

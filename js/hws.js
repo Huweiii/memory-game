@@ -25,54 +25,70 @@ for(var i=0; i<cardEl.length; i++) {
     card.appendChild(getImg);
 }
 
-let img = document.getElementsByTagName('img');
-let deck = document.querySelector(".deck");
+
 
 // --------------------------------------------------
 
 
-// 点击后普通效果 绿色背景 open
+// let img = document.getElementsByTagName('img');
+let deck = document.querySelector(".deck");
+let lastClick = null;
+let result = 0;
+
+// 点击事件
 deck.addEventListener("click", function(event){
     let cardEl = event.target;
-    
     // 查看nodeName
-    console.log("clicked" + event.target.nodeName);
-    // 如果目标nodeName为IMG，则更换card的className
+    console.log("clicked" + cardEl.nodeName);
 
-    if (event.target.nodeName == "IMG"){
+    // 如果目标nodeName为IMG，则更换card的className
+    if (cardEl.nodeName == "IMG"){
         cardEl.parentNode.className = "open";
         console.log("open");
-    }
-    
-    // 800毫秒后翻回卡片
-    setTimeout(function(){
-        if (event.target.nodeName == "IMG"){
-        cardEl.parentNode.className = "card";
+
+        // 如果上次点击为空，记录上次点击为目标点击
+        if (lastClick == null) { 
+            lastClick = cardEl;
+        } else { 
+            // 判断两个节点 
+            if (cardEl.src === lastClick.src) {
+                cardEl.parentNode.className = "match";
+                lastClick.parentNode.className = "match";
+                console.log("match");
+                
+                // 判断是否翻完
+                result++;
+                console.log(result);
+               
+                // 如果翻完，显示成功页面
+                let success = document.getElementsByClassName("success");
+                if (result == 8) {  
+                    console.log("All done")
+                    success[0].style.display = "block";
+                };
+                                
+            } else {
+                let savelastClick = lastClick;
+                cardEl.parentNode.className = "notMatch";
+                savelastClick.parentNode.className = "notMatch";
+                console.log("notMatch");
+                
+                // 800毫秒后翻回卡片
+                setTimeout(function(){
+                    if (cardEl.nodeName == "IMG"){
+                        cardEl.parentNode.className = "card";
+                        savelastClick.parentNode.className = "card";
+                    }
+                }, 800)
+            }
+            // 重置lastClick
+            lastClick = null;
         }
-    }, 800)
-    
+    }   
+    console.log(cardEl.outerHTML);
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+let success = document.getElementsByClassName("success");
 
 
 

@@ -22,6 +22,11 @@
     .refresh { 
         margin-top: 20px;
     }
+
+    .congratsImg {
+        margin-top: 120px;
+        width: 300px;
+    }
 }
 
 @media screen and (min-width: 400px) and (max-width: 579px) {
@@ -42,6 +47,10 @@
     .refresh { 
         margin-top: 20px;
     }
+
+    .congratsImg {
+        width: 380px;
+    }
 }
 
 @media screen and (min-width: 580px) {
@@ -56,6 +65,11 @@
         display: block;
         margin-block-start: 0.75em;
         margin-block-end: 1em;
+    }
+
+    .congratsImg {
+        margin-top: 160px;
+        width: 540px;
     }
 
 }

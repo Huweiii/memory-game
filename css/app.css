@@ -137,3 +137,54 @@ img {
     color: #FFFFFF;
     line-height: 44px;
 }
+
+.success {
+    display: none;
+    width:100%;
+    height: 100%;
+    position:fixed;
+    margin: 0 auto;
+    top: 0;
+}
+
+#congrats{
+    margin-top: 10px;
+    color: #FFFFFF;
+}
+
+#score{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: Rockwell-Regular;
+    font-size: 48px;
+    color: #FFFFFF;
+}
+
+#numbers{
+    margin-top: 0px;
+    margin-bottom: 4px;
+    display: inline-block;
+    font-family: Rockwell-Regular;
+    font-size: 28px;
+    color: #FFFFFF;
+}
+
+#unit{
+    margin-top: 0px;
+    margin-bottom: 4px;
+    display: inline-block;
+    font-family: Rockwell-Regular;
+    font-size: 28px;
+    color: #FFFFFF;
+}
+
+.congratsImg {
+    text-align: center;
+    margin-top: 200px;
+    width: 540px;
+}
+
+.modal {
+    height: 100%;
+    background: rgba(41,48,64,0.90);
+}
