@@ -1,4 +1,4 @@
-// 布置基本随机图形
+// 随机图形函数
 
 function start(){
     // 获取所有.card元素 （这是一个数列）
@@ -28,14 +28,12 @@ function start(){
     }
 }
 
+// 布置运行一次随机图形
 
 start();
 
-
 // --------------------------------------------------
 
-
-// let img = document.getElementsByTagName('img');
 let deck = document.querySelector(".deck");
 let lastClick = null;
 let result = 0;
@@ -96,26 +94,30 @@ deck.addEventListener("click", function(event){
 // 点击refresh按钮刷新页面
 let clickRefresh = document.querySelector(".refresh");
 let baseCard = document.getElementsByClassName("baseCard");
-let removeImg = document.querySelectorAll("img");
-    
-clickRefresh.addEventListener('click', function(){   
+
+
+clickRefresh.addEventListener('click', function(){  
+    let removeImg = document.querySelectorAll("img");
     for(let j=0; j<baseCard.length; j++) {
         removeImg[j].remove();
         baseCard[j].firstElementChild.className = "card";
     }
-    start();   
+    lastClick = null;
+    start();     
 });
 
 // 点击Again按钮刷新页面
 let clickAgain = document.querySelector(".again");
-    
-clickAgain.addEventListener('click', function(){   
-    for(let k=0; k<baseCard.length; k++) {
-        removeImg[k].remove();
-        baseCard[k].firstElementChild.className = "card";
-    }
+
+clickAgain.addEventListener('click', function(){ 
     success[0].style.display = "none";
-    start();   
+    let removeImg = document.querySelectorAll("img");
+    for(let j=0; j<baseCard.length; j++) {
+        removeImg[j].remove();
+        baseCard[j].firstElementChild.className = "card";
+    }
+    lastClick = null;
+    start();  
 });
 
 

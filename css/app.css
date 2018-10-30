@@ -1,6 +1,7 @@
 body {
     text-align: center;
     margin: 0 auto;
+    background-color: #293040;
 }
 
 h1 {
@@ -51,7 +52,7 @@ h1 {
 }
 
 .card {
-    background: #FFFFFF;
+    background: rgb(237, 238, 240);
     box-shadow: 8px 8px 8px -4px #C8CCD4;
     border-radius: 6px;
     width: 86%;
