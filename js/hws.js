@@ -84,6 +84,8 @@ deck.addEventListener("click", function(event){
                     }
                 }, 800)
             }
+
+            
             // 重置lastClick
             lastClick = null;
         }
