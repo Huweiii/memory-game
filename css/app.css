@@ -47,11 +47,13 @@ h1 {
 }
 
 .baseCard {
+    cursor: pointer;
     width: 25%;
     height: 25%;
 }
 
 .card {
+    
     background: rgb(255, 255, 255);
     box-shadow: 8px 8px 8px -4px #C8CCD4;
     border-radius: 6px;
@@ -126,6 +128,7 @@ img {
 
 
 .refresh {
+    cursor: pointer;
     border: 0px;
     width: 120px;
     height: 40px;
@@ -140,6 +143,7 @@ img {
 }
 
 .again {
+    cursor: pointer;
     border: 0px;
     width: 120px;
     height: 40px;
@@ -195,7 +199,7 @@ img {
 
 .congratsImg {
     text-align: center;
-    margin-top: 200px;
+    margin-top: 220px;
     width: 540px;
 }
 
