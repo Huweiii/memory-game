@@ -85,6 +85,12 @@ deck.addEventListener("click", function(event){
                     // 如果翻完，显示成功页面
                     if (result == 8) {  
                         console.log("All done")
+                        // 评分 大于65次 2颗星 、大于100次 1颗星
+                        if (clickTimes > 65){ 
+                            document.getElementById('score').textContent = "⭐⭐️";
+                        }  if (clickTimes > 100){ 
+                            document.getElementById('score').textContent = "⭐️";
+                        }  
                         success[0].style.display = "block";
                     };
                 
@@ -133,6 +139,7 @@ clickRefresh.addEventListener('click', function(){
 let clickAgain = document.querySelector(".again");
 
 clickAgain.addEventListener('click', function(){ 
+    document.getElementById('score').textContent = "⭐⭐️⭐️";
     success[0].style.display = "none";
     let removeImg = document.querySelectorAll("img");
     for(let j=0; j<baseCard.length; j++) {
