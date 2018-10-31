@@ -1,5 +1,7 @@
-// 随机图形函数
+// 声明计数变量
+let clickTimes = 0;
 
+// 随机图形函数
 function start(){
     // 获取所有.card元素 （这是一个数列）
     const cardEl = document.querySelectorAll(".card");
@@ -26,29 +28,34 @@ function start(){
         // console.log(data[i]);
         card.appendChild(getImg);
     }
+    clickTimes = 0;
 }
 
 // 布置运行一次随机图形
-
 start();
 
 // --------------------------------------------------
+
 
 let deck = document.querySelector(".deck");
 let lastClick = null;
 let result = 0;
 let success = document.getElementsByClassName("success");
-let clickTimes = 0;
+
 
 // 点击事件
 deck.addEventListener("click", function(event){
     let cardEl = event.target;
     // 判断如果没有点击没有被open并且没有被match
-    if ((cardEl.parentNode.className != "open") && (cardEl.parentNode.className != "match" )){
-        clickTimes++;
+    if ((cardEl.parentNode.className != "open") && (cardEl.parentNode.className != "match" ) && (cardEl = event.target)){
+        if (cardEl.nodeName == "IMG"){
+            clickTimes++;
+        }
     }
     document.querySelector(".numbers").textContent = clickTimes;
     document.querySelector("#numbers").textContent = clickTimes;
+
+
     console.log(clickTimes + "Moves");
     
     // 查看nodeName
@@ -109,7 +116,6 @@ deck.addEventListener("click", function(event){
 // 点击refresh按钮刷新页面
 let clickRefresh = document.querySelector(".refresh");
 let baseCard = document.getElementsByClassName("baseCard");
-
 
 clickRefresh.addEventListener('click', function(){  
     let removeImg = document.querySelectorAll("img");
