@@ -10,9 +10,7 @@ Hope you enjoy~
 
 制作过程：
 
-![Desktop HD](/Users/P2G/Desktop/Desktop HD.png)
 
-![Desktop HD Copy](/Users/P2G/Desktop/Desktop HD Copy.png)
 
 1.在设计软件中画出原型图：
 
