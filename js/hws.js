@@ -43,8 +43,18 @@ function start(){
         console.log('seconds'); 
         timerNum.textContent = timeAdd;
         timerNum_2.textContent = timeAdd;
+        // 时间评分
+        if (timeAdd > 60){ 
+            document.getElementById('score').textContent = "⭐⭐️";
+            document.getElementById('star').textContent = "⭐⭐️";
+        }  if (timeAdd > 100){ 
+            document.getElementById('score').textContent = "⭐️";
+            document.getElementById('star').textContent = "⭐️";
+        } 
     }, 1000);
 }
+
+// 时间评分
 
 // 布置运行一次随机图形
 start();
@@ -58,6 +68,7 @@ let success = document.getElementsByClassName("success");
 
 // 点击事件
 deck.addEventListener("click", function(event){
+    
 
     let cardEl = event.target;
     // 判断如果没有点击没有被open并且没有被match
@@ -76,7 +87,6 @@ deck.addEventListener("click", function(event){
     if (clickTimes > 50){ 
         document.getElementById('score').textContent = "⭐⭐️";
         document.getElementById('star').textContent = "⭐⭐️";
-
     }  if (clickTimes > 80){ 
         document.getElementById('score').textContent = "⭐️";
         document.getElementById('star').textContent = "⭐️";
@@ -150,6 +160,10 @@ deck.addEventListener("click", function(event){
     }   
     console.log(cardEl.outerHTML);
 });
+
+
+
+
 
 // 点击refresh按钮刷新页面
 let clickRefresh = document.querySelector(".refresh");
