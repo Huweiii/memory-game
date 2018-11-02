@@ -10,21 +10,13 @@ Hope you enjoy~
 
 制作过程：
 
-<<<<<<< HEAD
-||||||| merged common ancestors
+
 ![Desktop HD](/Users/P2G/Desktop/Desktop HD.png)
 =======
-![Desktop HD.png](https://upload-images.jianshu.io/upload_images/10955842-0bf09a2003df447c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
->>>>>>> 49e568445ac611fb0e486f37037071577916b055
 
-<<<<<<< HEAD
-||||||| merged common ancestors
 ![Desktop HD Copy](/Users/P2G/Desktop/Desktop HD Copy.png)
 =======
-![Desktop HD Copy.png](https://upload-images.jianshu.io/upload_images/10955842-44204959932f19f0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-(/Users/P2G/Desktop/Desktop HD Copy.png)
->>>>>>> 49e568445ac611fb0e486f37037071577916b055
 
 1.在设计软件中画出原型图：
 

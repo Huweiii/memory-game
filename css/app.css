@@ -34,6 +34,22 @@ h1 {
     letter-spacing: -0.76px;
 }
 
+.timeNum {
+    display: inline-block;
+    font-family: Rockwell-Regular;
+    font-size: 24px;
+    color: #293040;
+    letter-spacing: -0.76px;
+}
+
+.seconds {
+    display: inline-block;
+    font-family: Rockwell-Regular;
+    font-size: 24px;
+    color: #293040;
+    letter-spacing: -0.76px;
+}
+
 .unit {
     display: inline-block;
     font-family: Rockwell-Regular;
@@ -60,9 +76,20 @@ h1 {
     height: 25%;
 }
 
-.card {
-    
+.card {   
     background: rgb(255, 255, 255);
+    box-shadow: 8px 8px 8px -4px #C8CCD4;
+    border-radius: 6px;
+    width: 86%;
+    height: 86%;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.test {   
+    background: rgb(197, 182, 182);
     box-shadow: 8px 8px 8px -4px #C8CCD4;
     border-radius: 6px;
     width: 86%;
@@ -172,6 +199,7 @@ img {
     position:fixed;
     margin: 0 auto;
     top: 0;
+    background: rgba(41,48,64,0.90);
 }
 
 #congrats{
@@ -188,6 +216,15 @@ img {
 }
 
 #numbers{
+    margin-top: 0px;
+    margin-bottom: 4px;
+    display: inline-block;
+    font-family: Rockwell-Regular;
+    font-size: 28px;
+    color: #FFFFFF;
+}
+
+#timeNum_2 {
     margin-top: 0px;
     margin-bottom: 4px;
     display: inline-block;
@@ -213,5 +250,5 @@ img {
 
 .modal {
     height: 100%;
-    background: rgba(41,48,64,0.90);
+    
 }
